@@ -157,7 +157,7 @@ class UserDataManager
      * @param $levelName
      * @param int $time
      */
-    public function setGroup(IPlayer $player, PPGroup $group, $levelName, $time = -1)
+    public function setGroup(IPlayer $player, PPGroup $group, $levelName = null, $time = -1)
     {
         if($levelName === null)
         {
@@ -230,7 +230,7 @@ class UserDataManager
                 "group" => $this->plugin->getDefaultGroup()->getName(),
                 "permissions" => [
                 ],
-                "expTime" => -1
+                "expTime" => $worldData["expTime"]
             ];
 
             $this->setData($player, $tempUserData);

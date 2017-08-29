@@ -137,5 +137,8 @@ class PPListener implements Listener
         $player = $event->getPlayer();
 
         $this->plugin->setGroup($player, $this->plugin->getDefaultGroup());
+        if($player instanceof Player){
+            $player->sendMessage(TextFormat::GREEN . PurePerms::MAIN_PREFIX . ' ' . $this->plugin->getMessage("cmds.setgroup.messages.on_player_group_change", $this->plugin->getDefaultGroup()->getName()));
+        }
     }
 }
