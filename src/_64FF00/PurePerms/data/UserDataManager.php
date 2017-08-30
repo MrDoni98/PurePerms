@@ -157,7 +157,7 @@ class UserDataManager
      * @param $levelName
      * @param int $time
      */
-    public function setGroup(IPlayer $player, PPGroup $group, $levelName = null, $time = -1)
+    public function setGroup(IPlayer $player, PPGroup $group, $levelName, $time = -1)
     {
         if($levelName === null)
         {
